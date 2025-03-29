@@ -20,7 +20,7 @@ const Auth = () => {
   });
 
   // API endpoint base URL from environment variable or default to localhost
-  const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8080";
+  const API_BASE_URL = import.meta.env.VITE_API_URL || "https://intellitrade-backend.onrender.com";
 
   // Handler for login
   const handleLogin = async (credentials) => {

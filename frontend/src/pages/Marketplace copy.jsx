@@ -66,7 +66,7 @@ const Marketplace = () => {
             // Only include assets that are marked as "For Sale"
             if (isForSale) {
               // Fetch title and description from the database
-              const response = await fetch(`http://localhost:8080/api/assets/${assetId}`);
+              const response = await fetch(`https://intellitrade-backend.onrender.com/api/assets/${assetId}`);
               if (!response.ok) {
                 console.error(`Failed to fetch details for asset ID ${assetId}`);
                 return null;

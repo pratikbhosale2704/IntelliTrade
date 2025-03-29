@@ -52,7 +52,8 @@ const OwnedAssets = () => {
         ownedAssetsFormatted.map(async (assetID) => {
           try {
             console.log("Fetching details for asset ID:", assetID);
-            const response = await fetch(`http://localhost:8080/api/assets/${assetID}`);
+            // const response = await fetch(`http://localhost:8080/api/assets/${assetID}`);
+            const response = await fetch(`https://intellitrade-backend.onrender.com/api/assets/${assetID}`);
             console.log("Response status:", response.status);
             console.log("Response content-type:", response.headers.get('content-type'));
 

@@ -43,7 +43,7 @@ const UploadIP = () => {
   const storeAssetInDB = async (assetData) => {
     try {
       console.log("Sending asset data to backend:", assetData);
-      const response = await fetch("http://localhost:8080/api/assets", {
+      const response = await fetch("https://intellitrade-backend.onrender.com/api/assets", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(assetData),

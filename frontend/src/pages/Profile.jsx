@@ -18,7 +18,7 @@ const Profile = () => {
   const [totalValue, setTotalValue] = useState(0); // State for total value in Wei
   const navigate = useNavigate(); // For redirection
 
-  const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8080";
+  const API_BASE_URL = import.meta.env.VITE_API_URL || "https://intellitrade-backend.onrender.com";
 
   useEffect(() => {
     if (!user) {
