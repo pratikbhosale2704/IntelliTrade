@@ -47,7 +47,7 @@ const UploadIP = () => {
   const storeAssetInDB = async (assetData) => {
     try {
       console.log("Sending asset data to backend:", assetData); // Debugging log
-      const response = await fetch("http://localhost:8080/api/assets", {
+      const response = await fetch("https://intellitrade-backend.onrender.com/api/assets", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(assetData),
@@ -161,7 +161,7 @@ const UploadIP = () => {
     console.log("AI Valuation:", aiData.estimated_price);
 
     // Update the `aiValuation` in MongoDB
-    await fetch(`http://localhost:8080/api/assets/${latestAssetID}`, {
+    await fetch(`https://intellitrade-backend.onrender.com/api/assets/${latestAssetID}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ aiValuation: aiData.estimated_price }),
